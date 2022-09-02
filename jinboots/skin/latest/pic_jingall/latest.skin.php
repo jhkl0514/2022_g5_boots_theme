@@ -38,9 +38,11 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
                     echo "<strong>".$list[$i]['subject']."</strong>";
                 else
                     echo $list[$i]['subject'];
+                    
                 
                 echo "</a>";
                 ?>
+                <span class="lt_date"><?php echo $list[$i]['datetime2'] ?></span>
             </div>
 
             

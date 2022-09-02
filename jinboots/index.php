@@ -325,42 +325,24 @@ include_once(G5_THEME_PATH.'/head.php');
  
 </style>
 
-<div class="container position-relative slide1">
-  <img src="<?php echo G5_THEME_IMG_URL?>/prev.png" alt="" class="prev d-none d-md-block" >
-  <img src="<?php echo G5_THEME_IMG_URL?>/next.png" alt="" class="next d-none d-md-block">
-  <div class="slickslide1">
-    <div class="sItem">
-        <img src="<?php echo G5_THEME_IMG_URL ?>/img1.jpg" alt="" class="img-fluid">
-    </div>
-    <div class="sItem">
-        <img src="<?php echo G5_THEME_IMG_URL ?>/img2.jpg" alt="" class="img-fluid">
-    </div>
-    <div class="sItem">
-        <img src="<?php echo G5_THEME_IMG_URL ?>/img3.jpg" alt="" class="img-fluid">
-    </div>
-    <div class="sItem">
-        <img src="<?php echo G5_THEME_IMG_URL ?>/img4.jpg" alt="" class="img-fluid">
-    </div>
-    <div class="sItem">
-        <img src="<?php echo G5_THEME_IMG_URL ?>/img5.jpg" alt="" class="img-fluid">
-    </div>
-    <div class="sItem">
-        <img src="<?php echo G5_THEME_IMG_URL ?>/img6.jpg" alt="" class="img-fluid">
-    </div>
-    <div class="sItem">
-        <img src="<?php echo G5_THEME_IMG_URL ?>/img7.jpg" alt="" class="img-fluid">
-    </div>
-
-  </div>
-</div>
-
-
 <div class="container position-relative slide2">
+    <h2 class="text-center pt-5 mt-5 fs-1 fw-bold">갤러리</h2>      
     <img src="<?php echo G5_THEME_IMG_URL?>/prev.png" alt="" class="prev d-none d-md-block" >
     <img src="<?php echo G5_THEME_IMG_URL?>/next.png" alt="" class="next d-none d-md-block">
     <div class="slickslide2">
         <?php
             echo latest('theme/pic_jingall', 'gallery', 7, 23);		
+        ?>
+    </div>
+</div>
+
+<div class="container position-relative slide3">
+    <h2 class="text-center pt-5 mt-5 fs-1 fw-bold">갤러리</h2>      
+    <img src="<?php echo G5_THEME_IMG_URL?>/prev.png" alt="" class="prev d-none d-md-block" >
+    <img src="<?php echo G5_THEME_IMG_URL?>/next.png" alt="" class="next d-none d-md-block">
+    <div class="slickslide2">
+        <?php
+            echo latest('theme/pic_jingall', 'gallery', 4, 23);		
         ?>
     </div>
 </div>
@@ -468,6 +450,30 @@ include_once(G5_THEME_PATH.'/head.php');
         }
     ]
     });
+
+    $('.slickslide3').slick({
+    centerMode: true,
+    slidesToShow: 5,
+    nextArrow:$('.slide3 .next'),
+    prevArrow:$('.slide3 .prev'),
+    responsive: [
+        {
+        breakpoint: 768,
+        settings: {
+            centerMode: true,
+            slidesToShow: 1
+        }
+        },
+        {
+        breakpoint: 480,
+        settings: {
+            centerMode: true,
+            slidesToShow: 1
+        }
+        }
+    ]
+    });
+    
     
 </script>
 
