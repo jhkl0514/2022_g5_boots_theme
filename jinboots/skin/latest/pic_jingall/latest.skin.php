@@ -23,14 +23,16 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     $img_content = '<img src="'.$img.'" alt="'.$thumb['alt'].'" class="w-100">';
     $wr_href = get_pretty_url($bo_table, $list[$i]['wr_id']);
     ?>
-        <div class="sItem">
+        <div class="sItem d-xl-flex justify-content-xl-between  mt-5">
+         <div class="item p-2 d-flex d-md-block">
             <div class="img">
-                <a href="<?php echo $wr_href; ?>">
+                <a href="<?php echo $wr_href; ?>" >
                     <?php echo run_replace('thumb_image_tag', $img_content, $thumb); ?>
                 </a>
             </div>
 
             <div class="txt">
+                <h2 class="fs-5 mb-3 mt-3">
                 <?php
                 echo "<a href=\"".$wr_href."\"> ";
                 
@@ -42,7 +44,9 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
                 
                 echo "</a>";
                 ?>
-                <span class="lt_date"><?php echo $list[$i]['datetime2'] ?></span>
+                </h2>
+                <span class="lt_date fs-6 text-secondary"><?php echo $list[$i]['datetime2'] ?></span>
+              </div> 
             </div>
 
             
