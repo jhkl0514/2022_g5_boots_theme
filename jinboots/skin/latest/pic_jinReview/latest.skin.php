@@ -4,8 +4,8 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 
 // add_stylesheet('css 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
 add_stylesheet('<link rel="stylesheet" href="'.$latest_skin_url.'/style.css">', 0);
-$thumb_width = 210;
-$thumb_height = 150;
+$thumb_width = 380;
+$thumb_height = 240;
 $list_count = (is_array($list) && $list) ? count($list) : 0;
 ?>
 
@@ -20,35 +20,41 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
         $img = G5_IMG_URL.'/no_img.png';
         $thumb['alt'] = '이미지가 없습니다.';
     }
-    $img_content = '<img src="'.$img.'" alt="'.$thumb['alt'].'" class="w-100">';
+    $img_content = '<img src="'.$img.'" alt="'.$thumb['alt'].'" class="card-img-top"
+    alt="card-img-top" style="height: 240px;">';
     $wr_href = get_pretty_url($bo_table, $list[$i]['wr_id']);
     ?>
-        <div class="sItem d-xl-flex justify-content-xl-between  mt-5">
-         <div class="item p-2 d-flex d-md-block">
-            <div class="img">
-                <a href="<?php echo $wr_href; ?>" >
-                    <?php echo run_replace('thumb_image_tag', $img_content, $thumb); ?>
-                </a>
-            </div>
+        <div class="col-md-6 col-xl-4 mt-5 pb-5">
+         <div class="d-flex justify-content-xl-between justify-content-center">
+         <div class="card border-0 rounded-5"  style="width: 380px;"> 
+                <div>       
+                    <a href="<?php echo $wr_href; ?>" >
+                        <?php echo run_replace('thumb_image_tag', $img_content, $thumb); ?>
+                    </a>
+                </div>              
 
-            <div class="txt">
-                <h2 class="fs-5 mb-3 mt-3">
-                <?php
-                echo "<a href=\"".$wr_href."\"> ";
-                
-                if ($list[$i]['is_notice'])
-                    echo "<strong>".$list[$i]['subject']."</strong>";
-                else
-                    echo $list[$i]['subject'];
+            <div class="card-body" style="height: 275px;">
+                <div class="txt">
+                <h5 class="card-title fs-5 fw-bold mb-3">
+                    <?php
+                    echo "<a href=\"".$wr_href."\"> ";
                     
-                
-                echo "</a>";
-                ?>
-                </h2>
-                <span class="lt_date fs-6 text-secondary"><?php echo $list[$i]['datetime2'] ?></span>
-              </div> 
+                    if ($list[$i]['is_notice'])
+                        echo "<strong>".$list[$i]['subject']."</strong>";
+                    else
+                        echo $list[$i]['subject'];                        
+                    
+                    echo "</a>";
+                    ?>
+                    </h5>
+                    <div style="height: 1px; background:#F0F0F0"></div>                    
+                    <p class="card-text fs-6 text-secondary mt-4">
+                         <? echo get_text(cut_str(strip_tags($list[$i]['wr_content']),80)); ?> 
+                    </p>
+                </div> 
+              </div>
             </div>
-
+            </div>
             
         </div>
 

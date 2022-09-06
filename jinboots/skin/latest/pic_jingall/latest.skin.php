@@ -4,8 +4,8 @@ include_once(G5_LIB_PATH.'/thumbnail.lib.php');
 
 // add_stylesheet('css 구문', 출력순서); 숫자가 작을 수록 먼저 출력됨
 add_stylesheet('<link rel="stylesheet" href="'.$latest_skin_url.'/style.css">', 0);
-$thumb_width = 210;
-$thumb_height = 150;
+$thumb_width = 290;
+$thumb_height = 210;
 $list_count = (is_array($list) && $list) ? count($list) : 0;
 ?>
 
@@ -23,8 +23,8 @@ $list_count = (is_array($list) && $list) ? count($list) : 0;
     $img_content = '<img src="'.$img.'" alt="'.$thumb['alt'].'" class="w-100">';
     $wr_href = get_pretty_url($bo_table, $list[$i]['wr_id']);
     ?>
-        <div class="sItem d-xl-flex justify-content-xl-between  mt-5">
-         <div class="item p-2 d-flex d-md-block">
+        <div class="sItem  mt-5">
+         <div class="item p-2 d-md-block">
             <div class="img">
                 <a href="<?php echo $wr_href; ?>" >
                     <?php echo run_replace('thumb_image_tag', $img_content, $thumb); ?>

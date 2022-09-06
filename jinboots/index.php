@@ -22,6 +22,33 @@ include_once(G5_THEME_PATH.'/head.php');
     }
     .mView video{position: absolute; width: 100%; left: 50%; top: 50%; transform: translate(-50%,-50%)}
     .line{height: 1px; background: #ddd;}
+
+   .item {
+         position: absolute;
+    }
+    .item.item-top {
+        position: relative;
+        transform: translate(300px, -500px);
+    }
+    .item.item-right{
+        position: relative;
+        transform: translate(350px, -450px);
+    }
+    .item.ani{
+        transform: translate(10px, 200px);
+    }
+    .item.ani .gif{
+    width: 180px;
+    height: 180px;
+    border-radius: 30px;
+    box-shadow: 10px 17.3px 40px 0 rgb(0 0 0 / 20%);
+}
+
+.item.ani img:not(.gif) {
+  position: relative;
+  top: -16px;
+  left: 8px;
+}
 </style>
 
 <!-- aos.js -->
@@ -48,9 +75,22 @@ include_once(G5_THEME_PATH.'/head.php');
 
 <div class="container" >
     <div class="row pt-5 mt-5 " >
-        <div class="col-lg-6 position-relative" data-aos="fade-right"  data-aos-offset="300"   data-aos-easing="ease-in-sine">
-            <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_01.png" alt=""  class="img-fluid"> 
+        <div class="col-lg-6 position-relative item" data-aos="fade-right"  data-aos-offset="300"   data-aos-easing="ease-in-sine">
+            <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_01.png" alt=""  class="img-fluid">
+            <div class="item item-top">
+            <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_01_item01.png" alt="">
+        </div>        
+        <div class="item item-right">
+            <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_01_item02.png" alt="">
         </div>
+        <div class="item ani">
+            <img src="<?php echo G5_THEME_IMG_URL ?>/main_ani.gif" class="gif" alt="">
+            <!-- <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_01_item03.png" alt=""> -->
+        </div>   
+        </div>
+        
+
+       
         <div class="col-lg-6 d-flex justify-content-center justify-content-lg-start flex-wrap mt-lg-0 mt-2" 
 			 data-aos="fade-left"  data-aos-offset="500"   data-aos-easing="ease-in-sine">
             <h2 class="fs-2 fw-bold mt-auto text-lg-start text-center">
@@ -300,22 +340,22 @@ include_once(G5_THEME_PATH.'/head.php');
  
 <script>
     $('.slickslide3').slick({
-    centerMode: true,
-    slidesToShow: 5,
+    // centerMode: true,
+    slidesToShow: 4,
     nextArrow:$('.slide3 .next'),
     prevArrow:$('.slide3 .prev'),
     responsive: [
         {
-        breakpoint: 768,
+        breakpoint: 700,
         settings: {
-            centerMode: true,
-            slidesToShow: 1
+            // centerMode: true,
+            slidesToShow: 2
         }
         },
         {
-        breakpoint: 480,
+        breakpoint: 400,
         settings: {
-            centerMode: true,
+            // centerMode: true,
             slidesToShow: 1
         }
         }
@@ -330,29 +370,42 @@ include_once(G5_THEME_PATH.'/head.php');
 
 <div class="review mt-5">   
         <div class="container">
-         <div class="row ">
-            <h2 class="text-center pt-5 mt-5 fs-1 fw-bold">체험 수업 후기</h2>
-            <div class="col-md-4 p-4">
+         <h2 class="text-center pt-5 mt-5 fs-1 fw-bold">체험 수업 후기</h2>
+         <div class="row">
+           
                 <?php
                 // 이 함수가 바로 최신글을 추출하는 역할을 합니다.
                 // 사용방법 : latest(스킨, 게시판아이디, 출력라인, 글자수);
                 // 테마의 스킨을 사용하려면 theme/basic 과 같이 지정
-                echo latest('theme/pic_jinReview', 'gallery', 5, 23);		// 최소설치시 자동생성되는 갤러리게시판
-                ?>
-            </div>
-            <div class="col-md-4  p-4">
-                <?php           
-                echo latest('theme/pic_jinReview', 'gallery', 5, 23);
-                ?>
-            </div>
-            <div class="col-md-4  p-4">
-                <?php            
-                echo latest('theme/pic_jinReview', 'gallery', 5, 23);
-                ?>
-            </div>
+                 echo latest('theme/pic_jinReview', 'review', 3, 23);		// 최소설치시 자동생성되는 갤러리게시판
+                ?>                
+            
+           
         </div>    
     </div>
+
+
+    <!-- <div class="container">
+        <div class="row">
+          <div class="d-flex justify-content-between">
+              <div class="card rounded-5 border-0"  style="width: 380px;">
+                <img src="<?php echo G5_THEME_IMG_URL?>/main_review01.png" class="card-img-top"
+                alt="card-img-top" style="width: 380px; height: 240px;">
+                <div class="card-body " style="height: 275px; width: 380px;">
+                    <h5 class="card-title fs-4 mb-3">Card title</h5>
+                    <div style="height: 1px; background:#F0F0F0"></div>
+                    <p class="card-text fs-6 mt-4">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>                   
+                </div>
+              </div>
+           </div>         
+
+        </div>
+    </div> -->
 </div>
+
+
+
+
 
 <?php
 include_once(G5_THEME_PATH.'/tail.php');

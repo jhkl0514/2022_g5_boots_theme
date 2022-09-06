@@ -36,3 +36,45 @@
 .pic_lt .lt_more:hover {color:#777}
 
 
+
+ .not03 li{
+    float: left; width: calc( ( 100% - 30px * 2 ) / 3 );
+    height: 466px; padding: 35px;      
+    box-sizing: border-box;
+    margin-right: 30px;
+    background-color: #fff;
+    transition:0.3s;
+    position: relative;
+}
+    
+
+ .not03 li:last-child{
+    margin-right: 0;
+}
+
+
+ .not03 .not_card h3{
+    font-size: 21px; font-weight: 500; line-height: 32px; margin-bottom: 18px;
+}
+
+ .not03 li:hover{
+    transform: translate(0,-20px);
+    box-shadow: 0 20px 20px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+ .not03 li:last-child:hover {
+    transform: translate(0,-20px);
+    box-shadow: 0 20px 20px rgba(0,0,0,0.3);   
+}
+
+ .not03 li p.txt{
+    font-size: 15px;line-height: 24px; color: #787878;
+}
+
+ .not03 li p.data{
+    font-size: 13px;line-height: 24px; color: #A5A5A5;
+    position: absolute; left: 30px; bottom: 30px;
+}
+
+
