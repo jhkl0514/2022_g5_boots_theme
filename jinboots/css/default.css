@@ -61,10 +61,17 @@ h2.stitle{font-size: 32px;}
 .hd_pops_footer .hd_pops_close {background:#393939;position:absolute;top:0;right:0}
 
 /* 상단 레이아웃 */
+.container_sub{width: 1530px; margin: 0 auto;}
 
 
 /* 메인메뉴 */
 .nav-item > a{font-size: 1.6em;font-weight: bold;}
+.main_bg01{
+    background: url(../img/main_visual_bg01.png) no-repeat;
+    background-size: 100%;
+
+}
+
 
 
 /* 중간 레이아웃 */
@@ -74,16 +81,19 @@ h2.stitle{font-size: 32px;}
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  justify-content: center;
+  padding-left: 120px;  
   align-items: center;
 }
-.subView.subTopBg_01{background-image: url(../img/images01.jpg);}
-.subView.subTopBg_02{background-image: url(../img/images02.jpg);}
-.subView.subTopBg_03{background-image: url(../img/images03.jpg);}
-.subView.subTopBg_04{background-image: url(../img/images04.jpg);}
-.subView.subTopBg_05{background-image: url(../img/images05.jpg);}
+.subView.subTopBg_01{background-image: url(../img/sub_banner_00.png);}
+.subView.subTopBg_02{background-image: url(../img/sub_banner_01.png);}
+.subView.subTopBg_03{background-image: url(../img/sub_banner_02.png);}
+.subView.subTopBg_04{background-image: url(../img/sub_banner_03.png);}
+
 .stitle{}
-.locTitle{margin-top:-20px ;}
+.locTitle{
+  color: #000; font-weight: bold;
+
+}
 
 
 

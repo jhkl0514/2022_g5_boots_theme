@@ -3,8 +3,8 @@
 <style TYPE="text/css">
 
 	#mysubmenu{
-		position: absolute;top:0;left: 50%; margin-top: -60px;
-		transform:translateX(-50%); background: white;
+		position: absolute;top:0;left: 50%; margin-top: -75px;
+		transform:translateX(-50%);		
 		}
 	#snb {width:100%;}
 	#snb > li.snb{width:100%;display:none;}
@@ -13,15 +13,16 @@
 
 	#snb > li .snb2dDown{display:none;}
 
-	#snb > li > ul > li a{display:block;padding:15px 30px;color:#666;-webkit-transition-duration: 0.2s;-webkit-transition-timing-function: ease;transition-duration: 0.2s;transition-timing-function: ease;}
-	#snb > li > ul > li a b{font-size:16px;}
+	#snb > li > ul > li a{ font-weight: 200; display:block;padding:15px 30px;color:#666;-webkit-transition-duration: 0.2s;-webkit-transition-timing-function: ease;transition-duration: 0.2s;transition-timing-function: ease;}
+	#snb > li > ul > li a b{font-size:20px;}
 	
-	#snb > li > ul > li.snb2d.active a{background:skyblue;color:#000;}
+	#snb > li > ul > li.snb2d.active a{color: #00bfe6; font-weight: 600;}
 	#snb > li > ul > li a{overflow:hidden;}
 	#snb > li > ul > li a i{float:right;}
 
 	.snb ul.snb2dul li{float:left}
 	.snb2d b i{display: none;}
+	.subline{width: 100%; height: 1px; background: #eee;}
 
 
 

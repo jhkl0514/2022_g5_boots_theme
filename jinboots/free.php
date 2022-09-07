@@ -20,6 +20,7 @@ $(document).ready(function(){
 
 
 <img src="<?php echo G5_THEME_IMG_URL ?>/img_free.PNG" alt="" class="d-block mx-auto">
+sdkfjklajdf
 
 
 

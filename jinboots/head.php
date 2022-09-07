@@ -117,12 +117,20 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 <!-- 콘텐츠 시작 { -->
 
 <? if(!defined('_INDEX_')) { ?> 
-   <div class="subView" id="page_title">
-
+   <div class="subView rounded-5 container_sub" id="page_title"> 
     <div class="txtWrap">
-        <h2 class="loc1D stitle text-white locTitle"></h2>
-    </div>
-
+        <h2 class="loc1D stitle text-start text-black locTitle "></h2>
+        <div class="mt-3">
+            <ul class="d-flex p-2 px-4 rounded-5 bg-dark bg-opacity-75 text-white gap-2 fs-6 ">
+                <li><img src="<? echo G5_THEME_IMG_URL?>/home_icon_white.png" alt=""></li>
+                <li><img src="<? echo G5_THEME_IMG_URL?>/sub_banner_nav_arrow.png" alt=""></li>
+                <li class="loc1D"></li>
+                <li><img src="<? echo G5_THEME_IMG_URL?>/sub_banner_nav_arrow.png" alt=""></li>
+                <li><?php echo get_head_title($g5['title']); ?></li>
+            </ul>
+            
+        </div>
+     </div> 
    </div>
 <? }?>
 
@@ -131,10 +139,13 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 <? if(defined('_INDEX_')) { ?> 
     <div class="container_wr"> <!-- full -->
 <? }else{?>
+    <div class="py-5">
+        <div class="subline"><div>
+    </div>
     <div class="container position-relative"> <!-- 1400 -->
-        <h2 id="container_title" class="stitle text-center py-3">
+        <h2 id="container_title" class="stitle fw-bold my-5 py-5">
             <span title="<?php echo get_text($g5['title']); ?>">
             <?php echo get_head_title($g5['title']); ?></span>
-        </h2>
+        </h2>          
 
 <?}?>

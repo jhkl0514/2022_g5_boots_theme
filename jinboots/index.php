@@ -24,31 +24,88 @@ include_once(G5_THEME_PATH.'/head.php');
     .line{height: 1px; background: #ddd;}
 
    .item {
-         position: absolute;
+        position: absolute; z-index: 999;
+        transform: translate(0, -700px);        
     }
-    .item.item-top {
+    
+    .item-top {
         position: relative;
-        transform: translate(300px, -500px);
+        left: 350px;top: 200px;        
     }
-    .item.item-right{
+    .item-right{
         position: relative;
-        transform: translate(350px, -450px);
+        left: 350px;top: 300px;
+
     }
-    .item.ani{
-        transform: translate(10px, 200px);
+    .ani{
+        position: relative;
+        left: -20px;top: 50px;
     }
-    .item.ani .gif{
+    .ani2{
+        position: relative;
+        left: -55px;top: 35px;
+    }
+    .ani .gif{
     width: 180px;
     height: 180px;
     border-radius: 30px;
     box-shadow: 10px 17.3px 40px 0 rgb(0 0 0 / 20%);
-}
+    }
 
-.item.ani img:not(.gif) {
-  position: relative;
-  top: -16px;
-  left: 8px;
-}
+    .ani img:not(.gif) {
+    position: relative;
+    transform: translate(-100px, -100px);
+    }
+
+    .main_bg01{
+    background: url(<?php echo G5_THEME_IMG_URL ?>/main_visual_bg01.png) no-repeat center;
+    background-size: cover;
+    background-color:#CEF5F5;
+    }
+    .main_bg02{
+    background: url(<?php echo G5_THEME_IMG_URL ?>/main_visual_bg02.png) no-repeat center;
+    background-size: cover;
+    background-color:#CEF5F5;
+    }
+    .charI{
+        position: absolute; z-index: 999;
+        transform: translate(0, 0);
+    }
+    .char{
+        position: relative;
+        left: 50px;top:65px;   
+    }
+    .img6I{
+        position: absolute;
+    }
+    .img6{
+        position: relative;  z-index: 999;
+        left: 325px;top:-250px;       
+        animation: rotate 10s linear infinite;
+    }
+    @keyframes rotate {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+
+    
+    .review{background: #e4faf6;}
+    .slide3 .prev,.slide3 .next{cursor: pointer;}
+    .slide3 img.prev,img.next{position: absolute;top: 60%;transform:translateY(-50%)}
+    .slide3 img.prev{left: -50px;}
+    .slide3 img.next{right: -50px;}
+
+    .slickslide3 .sItem{margin: 0 10px;}
+    .font-color-green {color: #00a371 !important;}
+
+    @media (max-width: 767px) {
+        .item-top,.item-right,.ani,.ani2,.img6 { display: none; }
+        .item,.charI,.img6I{display:none }
+    
+    }
+    
 </style>
 
 <!-- aos.js -->
@@ -74,21 +131,24 @@ include_once(G5_THEME_PATH.'/head.php');
 
 
 <div class="container" >
-    <div class="row pt-5 mt-5 " >
-        <div class="col-lg-6 position-relative item" data-aos="fade-right"  data-aos-offset="300"   data-aos-easing="ease-in-sine">
+    <div class="row pt-5 mt-5 pb-5" >
+        <div class="col-lg-6 position-relative" data-aos="fade-right"  data-aos-offset="300"   data-aos-easing="ease-in-sine">
             <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_01.png" alt=""  class="img-fluid">
-            <div class="item item-top">
-            <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_01_item01.png" alt="">
-        </div>        
-        <div class="item item-right">
-            <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_01_item02.png" alt="">
-        </div>
-        <div class="item ani">
-            <img src="<?php echo G5_THEME_IMG_URL ?>/main_ani.gif" class="gif" alt="">
-            <!-- <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_01_item03.png" alt=""> -->
-        </div>   
-        </div>
-        
+            <div class="item">
+                <div class="item-top">
+                    <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_01_item01.png" alt="" class="img-fluid">
+                </div>        
+                <div class="item-right">
+                    <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_01_item02.png" alt="" class="img-fluid">
+                </div>
+                <div class="ani">
+                    <img src="<?php echo G5_THEME_IMG_URL ?>/main_ani.gif" class="gif" alt="" class="img-fluid">             
+                </div>
+                <div class="ani2">         
+                    <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_01_item03.png" alt="" class="img-fluid">
+                </div>
+            </div> 
+        </div>       
 
        
         <div class="col-lg-6 d-flex justify-content-center justify-content-lg-start flex-wrap mt-lg-0 mt-2" 
@@ -97,51 +157,60 @@ include_once(G5_THEME_PATH.'/head.php');
             YBM 레몬만의 전용뷰어로 수업
             </h2>
             <p class="fs-6 mt-3 text-lg-start text-center">화상 회의실 같은 딱딱한 뷰어가 아닙니다. <br>
-                YBM교육이 개발한 화상수업 전용 뷰어입니다.</p>
+                YBM교육이 개발한 <strong class="font-color-green"> 화상수업 전용</strong> 뷰어입니다.</p>
         </div>
     </div>
 </div>
 
 
-<div class="container rounded-5">
-    <div class="row pt-5 mt-5 " >        
-    <div class="col-lg-6 d-flex justify-content-center justify-content-lg-end flex-wrap mt-lg-0 mt-5 pe-5 order-2 order-lg-1"
-		  data-aos="fade-up"  data-aos-duration="3000"
-		 >
+<div class="container ">
+    <div class="row  mt-5 mb-5 pt-5 pm-5 main_bg01 rounded-5" >        
+        <div class="col-lg-6 d-flex justify-content-center justify-content-lg-end flex-wrap mt-lg-0 pe-5 order-2 order-lg-1"
+		  data-aos="fade-up"  data-aos-duration="3000">
             <h2 class="fs-2 fw-bold mt-auto text-lg-end text-center">화상수업을 위해 개발된<br>e-Classbook</h2>
             <p class="fs-6 mt-3 text-lg-end text-center">오프라인 교재를 그대로 올려서 수업하지 않습니다.<br>
-            온라인 수업에 맞춰 개발된 온라인 전용 e-Classbook입니다.
+            온라인 수업에 맞춰 개발된 <strong class="font-color-green">온라인 전용 e-Classbook</strong>입니다.
             </p>
         </div>
-        <div class="col-lg-6 position-relative order-1 order-lg-2" data-aos="fade-down"  data-aos-easing="linear"  data-aos-duration="5000">
-            <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_02.png" alt="" class="img-fluid">          
+        <div class="col-lg-6 position-relative order-1 order-lg-2 pb-5" data-aos="fade-down"  data-aos-easing="linear"  data-aos-duration="5000">
+            <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_02.png" alt="" class="img-fluid" style="width:90%">          
         </div>
     </div>
 </div>
 
 <div class="container">
     <div class="row pt-5 mt-5" >
-        <div class="col-lg-6 position-relative" data-aos="fade-up">
-            <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_03.png" alt=""  class="img-fluid"> 
+        <div class="col-lg-6  position-relative" data-aos="fade-up">
+            
+                <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_03.png" alt=""  class="img-fluid">
+            
+            <div class="img6I">
+                <div class="img6">
+                <img src="<?php echo G5_THEME_IMG_URL ?>/img_6.png" alt=""  class="img-fluid">
+                </div>
+            </div>
         </div>
         <div class="col-lg-6 d-flex justify-content-center justify-content-lg-start flex-wrap mt-lg-0 mt-2" data-aos="fade-down">
             <h2 class="fs-2 fw-bold mt-auto text-lg-start text-center">지루할 틈이 없는 수업 진행</h2>
-            <p class="fs-6 mt-3 text-lg-start text-center">온라인 교구와 액티비티로 흥미있는 수업이 진행됩니다.<br>
+            <p class="fs-6 mt-3 text-lg-start text-center"><strong class="font-color-green">온라인 교구와 액티비티</strong>로 흥미있는 수업이 진행됩니다.<br>
 				선생님과 함께 직접 수업에 참여합니다.</p>
         </div>
     </div>
 </div>
 
-<div class="container rounded-5">
-    <div class="row pt-5 mt-5 " >        
+<div class="container">
+    <div class="row pt-5 mt-5 main_bg02 rounded-5 " >        
         <div class="col-lg-6 d-flex justify-content-center justify-content-lg-end flex-wrap mt-lg-0 mt-5 pe-5 order-2 order-lg-1" data-aos="fade-right">
-            <h2 class="fs-2 fw-bold mt-auto text-lg-end text-center">외국인 선생님 +<br>
-                                        한국인 선생님이 함께</h2>
-            <p class="fs-6 mt-3 text-lg-end text-center">외국인 선생님과 수업할 때, 한국인 선생님도<br>
-                옆에 함께합니다. 더 이상 영어가 두렵지 않습니다.
-            </p>
+            <div clsas="charI">
+                <h2 class="fs-2 fw-bold mt-auto text-lg-end text-center">외국인 선생님 +<br>
+                                            한국인 선생님이 함께</h2>
+                <p class="fs-6 mt-3 text-lg-end text-center">외국인 선생님과 수업할 때, 한국인 선생님도<br>
+                <strong class="font-color-green">옆에 함께</strong>합니다. 더 이상 영어가 두렵지 않습니다.
+                </p>
+            </div>
+            <div class="char"><img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_char.png" alt="" class="img-fluid"></div>
         </div>
-        <div class="col-lg-6 position-relative col-lg-6 position-relative order-1 order-lg-2" data-aos="fade-left">
+        <div class="col-lg-6 position-relative position-relative order-1 order-lg-2" data-aos="fade-left">
             <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_04.png" alt="" class="img-fluid">          
         </div>
     </div>
@@ -154,7 +223,7 @@ include_once(G5_THEME_PATH.'/head.php');
         </div>
         <div class="col-lg-6 d-flex justify-content-center justify-content-lg-start flex-wrap mt-lg-0 mt-2 " data-aos="fade-up-left">
             <h2 class="fs-2 fw-bold mt-auto text-lg-start text-center">
-            Main Class 자신감 UP<br>
+            Main Class 자신감 <strong class="font-color-green">UP</strong><br>
             예습도복습도<br>
             특별한 학습시스템
             </h2>
@@ -306,14 +375,7 @@ include_once(G5_THEME_PATH.'/head.php');
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<style>
-.slide3 .prev,.slide3 .next{cursor: pointer;}
-.slide3 img.prev,img.next{position: absolute;top: 60%;transform:translateY(-50%)}
-.slide3 img.prev{left: -50px;}
-.slide3 img.next{right: -50px;}
 
-.slickslide3 .sItem{margin: 0 10px;}
-</style>
 
 <!-- <div class="container position-relative slide2">
     <h2 class="text-center pt-5 mt-5 fs-1 fw-bold">갤러리</h2>      
@@ -332,10 +394,11 @@ include_once(G5_THEME_PATH.'/head.php');
     <img src="<?php echo G5_THEME_IMG_URL?>/slide_arrow_right.png" alt="" class="next d-none d-md-block">
     <div class="slickslide3">
         <?php
-            echo latest('theme/pic_jingall', 'gallery', 7, 35);		
+            echo latest('theme/pic_jingall', 'gallery', 7, 23);			
         ?>
-    </div>
+    </div>    
 </div>
+
 
  
 <script>
@@ -360,13 +423,13 @@ include_once(G5_THEME_PATH.'/head.php');
         }
         }
     ]
-    });    
+    }); 
+    
+
     
 </script>
 
-<style>
-    .review{background: #e4faf6;}
-</style>
+
 
 <div class="review mt-5">   
         <div class="container">
@@ -382,7 +445,8 @@ include_once(G5_THEME_PATH.'/head.php');
             
            
         </div>    
-    </div>
+   </div>
+   
 
 
     <!-- <div class="container">
