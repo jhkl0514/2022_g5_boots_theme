@@ -7,7 +7,7 @@ $co_id = "location";
 $menuNum = "2";
 $menuNum2 = "2";
 $g5['title'] = "무료체험";
-// http://jhkl0514.dothome.co.kr/theme/jinboots/free.php
+// https://jhkl0514.cafe24.com/gnuboard5/theme/jinboots/free.php
 
 include_once(G5_THEME_PATH.'/head.php');
 ?>

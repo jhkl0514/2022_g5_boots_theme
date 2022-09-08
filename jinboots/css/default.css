@@ -108,6 +108,20 @@ h2.stitle{font-size: 32px;}
 .slickslide1 .sItem.slick-center{padding: 15px;opacity: 1;transform:scale(1)}
 
 
+/* 서브메뉴 스토리 */
+.story_bg01{
+  width: 100%;
+  height: 480px;
+  background-color: #21272e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url(../img/intro_bg.png) no-repeat center;
+  background-size: cover;
+  position: sticky;
+  top: 100px;
+  z-index: -1;
+}
 
 
 /* 리뷰 */
