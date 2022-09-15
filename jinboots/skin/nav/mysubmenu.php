@@ -4,7 +4,8 @@
 
 	#mysubmenu{
 		position: absolute;top:0;left: 50%; margin-top: -75px;
-		transform:translateX(-50%);		
+		transform:translateX(-50%);	
+		width: 500px;	
 		}
 	#snb {width:100%;}
 	#snb > li.snb{width:100%;display:none;}
@@ -19,8 +20,10 @@
 	#snb > li > ul > li.snb2d.active a{color: #00bfe6; font-weight: 600;}
 	#snb > li > ul > li a{overflow:hidden;}
 	#snb > li > ul > li a i{float:right;}
-
-	.snb ul.snb2dul li{float:left}
+	
+	
+	.snb ul.snb2dul {display: flex; text-align: center;}
+	.snb ul.snb2dul li{width: 100%; }
 	.snb2d b i{display: none;}
 	.subline{width: 100%; height: 1px; background: #eee;}
 

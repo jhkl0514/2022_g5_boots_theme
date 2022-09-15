@@ -100,11 +100,7 @@ include_once(G5_THEME_PATH.'/head.php');
     .slickslide3 .sItem{margin: 0 10px;}
     .font-color-green {color: #00a371 !important;}
 
-    @media (max-width: 767px) {
-        .item-top,.item-right,.ani,.ani2,.img6 { display: none; }
-        .item,.charI,.img6I{display:none }
-    
-    }
+
     
 </style>
 
@@ -131,40 +127,43 @@ include_once(G5_THEME_PATH.'/head.php');
 
 
 <div class="container" >
-    <div class="row pt-5 mt-5 pb-5" >
-        <div class="col-lg-6 position-relative" data-aos="fade-right"  data-aos-offset="300"   data-aos-easing="ease-in-sine">
-            <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_01.png" alt=""  class="img-fluid">
-            <div class="item">
-                <div class="item-top">
-                    <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_01_item01.png" alt="" class="img-fluid">
-                </div>        
-                <div class="item-right">
-                    <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_01_item02.png" alt="" class="img-fluid">
+    <div class="row">
+        <div class="col-10 offset-1">
+            <div class="row pt-5 mt-5 pb-5 overflow-hidden" >
+                <div class="col-lg-6 position-relative" data-aos="fade-right"  data-aos-offset="300"   data-aos-easing="ease-in-sine">
+                    <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_01.png" alt=""  class="img-fluid">
+                    <div class="item">
+                        <div class="item-top">
+                            <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_01_item01.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="item-right">
+                            <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_01_item02.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="ani">
+                            <img src="<?php echo G5_THEME_IMG_URL ?>/main_ani.gif" class="gif" alt="" class="img-fluid">
+                        </div>
+                        <div class="ani2">
+                            <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_01_item03.png" alt="" class="img-fluid">
+                        </div>
+                    </div>
                 </div>
-                <div class="ani">
-                    <img src="<?php echo G5_THEME_IMG_URL ?>/main_ani.gif" class="gif" alt="" class="img-fluid">             
+            
+                <div class="col-lg-6 d-flex justify-content-center justify-content-lg-start flex-wrap mt-lg-0 mt-2 "
+                         data-aos="fade-left"  data-aos-offset="300"   data-aos-easing="ease-in-sine">
+                    <h2 class="fs-2 fw-bold mt-auto text-lg-start text-center">
+                    YBM 레몬만의 전용뷰어로 수업
+                    </h2>
+                    <p class="fs-6 mt-3 text-lg-start text-center">화상 회의실 같은 딱딱한 뷰어가 아닙니다. <br>
+                        YBM교육이 개발한 <strong class="font-color-green"> 화상수업 전용</strong> 뷰어입니다.</p>
                 </div>
-                <div class="ani2">         
-                    <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_01_item03.png" alt="" class="img-fluid">
-                </div>
-            </div> 
-        </div>       
-
-       
-        <div class="col-lg-6 d-flex justify-content-center justify-content-lg-start flex-wrap mt-lg-0 mt-2" 
-			 data-aos="fade-left"  data-aos-offset="500"   data-aos-easing="ease-in-sine">
-            <h2 class="fs-2 fw-bold mt-auto text-lg-start text-center">
-            YBM 레몬만의 전용뷰어로 수업
-            </h2>
-            <p class="fs-6 mt-3 text-lg-start text-center">화상 회의실 같은 딱딱한 뷰어가 아닙니다. <br>
-                YBM교육이 개발한 <strong class="font-color-green"> 화상수업 전용</strong> 뷰어입니다.</p>
+            </div>
         </div>
     </div>
 </div>
 
 
-<div class="container ">
-    <div class="row  mt-5 mb-5 pt-5 pm-5 main_bg01 rounded-5" >        
+<div class="container" >
+    <div class="row  mt-5 mb-5 pt-5 pm-5 main_bg01 rounded-5 overflow-sm-hidden" >        
         <div class="col-lg-6 d-flex justify-content-center justify-content-lg-end flex-wrap mt-lg-0 pe-5 order-2 order-lg-1"
 		  data-aos="fade-up"  data-aos-duration="3000">
             <h2 class="fs-2 fw-bold mt-auto text-lg-end text-center">화상수업을 위해 개발된<br>e-Classbook</h2>
@@ -178,7 +177,7 @@ include_once(G5_THEME_PATH.'/head.php');
     </div>
 </div>
 
-<div class="container">
+<div class="container px-3">
     <div class="row pt-5 mt-5" >
         <div class="col-lg-6  position-relative" data-aos="fade-up">
             
@@ -199,7 +198,7 @@ include_once(G5_THEME_PATH.'/head.php');
 </div>
 
 <div class="container">
-    <div class="row pt-5 mt-5 main_bg02 rounded-5 " >        
+    <div class="row pt-5 mt-5 main_bg02 rounded-5 overflow-hidden " >        
         <div class="col-lg-6 d-flex justify-content-center justify-content-lg-end flex-wrap mt-lg-0 mt-5 pe-5 order-2 order-lg-1" data-aos="fade-right">
             <div clsas="charI">
                 <h2 class="fs-2 fw-bold mt-auto text-lg-end text-center">외국인 선생님 +<br>

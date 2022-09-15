@@ -19,7 +19,7 @@ select {margin:0}
 p {margin:0;padding:0;word-break:break-all}
 hr {display:none}
 pre {overflow-x:scroll;font-size:1.1em}
-a {color:#000;text-decoration:none}
+a {color:#000;text-decoration:none;}
 
 *, :after, :before {
   -webkit-box-sizing:border-box;
@@ -71,6 +71,11 @@ h2.stitle{font-size: 32px;}
     background-size: 100%;
 
 }
+.line .subline{width: 100%; height: 1px; background: #eee;}
+
+.nav-item > a:hover{
+  color: #F00;  
+}
 
 
 
@@ -81,7 +86,7 @@ h2.stitle{font-size: 32px;}
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  padding-left: 120px;  
+  /* padding-left: 120px;   */
   align-items: center;
 }
 .subView.subTopBg_01{background-image: url(../img/sub_banner_00.png);}
@@ -89,9 +94,37 @@ h2.stitle{font-size: 32px;}
 .subView.subTopBg_03{background-image: url(../img/sub_banner_02.png);}
 .subView.subTopBg_04{background-image: url(../img/sub_banner_03.png);}
 
-.stitle{}
+.txtWrap{margin-left: 120px;}
+
 .locTitle{
   color: #000; font-weight: bold;
+
+}
+
+.storyBg .sbg{
+  position: relative;
+  color: #ffffff;
+  padding: 0 5px 2px 5px;
+  background: #00bfe6;
+  border-radius: 4px;
+ }
+
+@media screen and (max-width:768px){
+  .container_sub{width: 100%;}
+  .txtWrap{margin:0 auto;}
+
+}
+
+@media (max-width: 767px) {
+ .bottom {display:none }
+  body{padding:0 7px ;}
+ 
+ }
+ 
+
+@media (max-width: 767px) {
+  .item-top,.item-right,.ani,.ani2,.img6 { display: none; }
+  .item,.charI,.img6I{display:none }
 
 }
 
@@ -118,11 +151,27 @@ h2.stitle{font-size: 32px;}
   justify-content: center;
   background: url(../img/intro_bg.png) no-repeat center;
   background-size: cover;
-  position: sticky;
+  /* position: sticky; */
   top: 100px;
   z-index: -1;
 }
 
+
+.story_bg01 .story_dot b {
+  position: relative;
+}
+.story_bg01 .story_dot b::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #00d4ff;
+  border-radius: 50%;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 /* 리뷰 */
 .review{background: #e4faf6;}
