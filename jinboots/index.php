@@ -20,7 +20,7 @@ include_once(G5_THEME_PATH.'/head.php');
         width: 100%; padding-top: 36%;
         position: relative; overflow: hidden;
     }
-    .mView video{position: absolute; width: 100%; left: 50%; top: 50%; transform: translate(-50%,-50%)}
+    .mView video{position: absolute; width: 102%; left: 50%; top: 50%; transform: translate(-50%,-50%)}
     .line{height: 1px; background: #ddd;}
 
    .item {
@@ -129,7 +129,7 @@ include_once(G5_THEME_PATH.'/head.php');
 <div class="container" >
     <div class="row">
         <div class="col-10 offset-1">
-            <div class="row pt-5 mt-5 pb-5 overflow-hidden" >
+            <div class="row pt-5 mt-5 pb-5 overflow-hidden overflow-md-auto" >
                 <div class="col-lg-6 position-relative" data-aos="fade-right"  data-aos-offset="300"   data-aos-easing="ease-in-sine">
                     <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_01.png" alt=""  class="img-fluid">
                     <div class="item">
@@ -163,7 +163,7 @@ include_once(G5_THEME_PATH.'/head.php');
 
 
 <div class="container" >
-    <div class="row  mt-5 mb-5 pt-5 pm-5 main_bg01 rounded-5 overflow-sm-hidden" >        
+    <div class="row  mt-5 mb-5 pt-5 pm-5 main_bg01 rounded-5 overflow-hidden overflow-md-auto" >        
         <div class="col-lg-6 d-flex justify-content-center justify-content-lg-end flex-wrap mt-lg-0 pe-5 order-2 order-lg-1"
 		  data-aos="fade-up"  data-aos-duration="3000">
             <h2 class="fs-2 fw-bold mt-auto text-lg-end text-center">화상수업을 위해 개발된<br>e-Classbook</h2>
@@ -178,7 +178,7 @@ include_once(G5_THEME_PATH.'/head.php');
 </div>
 
 <div class="container px-3">
-    <div class="row pt-5 mt-5" >
+    <div class="row pt-5 mt-5 overflow-hidden overflow-md-auto" >
         <div class="col-lg-6  position-relative" data-aos="fade-up">
             
                 <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_03.png" alt=""  class="img-fluid">
@@ -198,7 +198,7 @@ include_once(G5_THEME_PATH.'/head.php');
 </div>
 
 <div class="container">
-    <div class="row pt-5 mt-5 main_bg02 rounded-5 overflow-hidden " >        
+    <div class="row pt-5 mt-5 main_bg02 rounded-5 overflow-hidden overflow-md-auto " >        
         <div class="col-lg-6 d-flex justify-content-center justify-content-lg-end flex-wrap mt-lg-0 mt-5 pe-5 order-2 order-lg-1" data-aos="fade-right">
             <div clsas="charI">
                 <h2 class="fs-2 fw-bold mt-auto text-lg-end text-center">외국인 선생님 +<br>
@@ -216,7 +216,7 @@ include_once(G5_THEME_PATH.'/head.php');
 </div>
 
 <div class="container">
-    <div class="row pt-5 mt-5 " >
+    <div class="row pt-5 mt-5 overflow-hidden overflow-md-auto " >
         <div class="col-lg-6 position-relative" data-aos="fade-up-right">
             <img src="<?php echo G5_THEME_IMG_URL ?>/main_visual_05.png" alt=""  class="img-fluid"> 
         </div>
@@ -251,10 +251,10 @@ include_once(G5_THEME_PATH.'/head.php');
         <div class="col-12 col-md-6 col-xxl-3">
             <div class="card">
                 <div class="row g-0 ">
-                    <div class="col-5 col-sm-3 d-flex align-items-center ms-4">
+                    <div class="col-3  d-flex align-items-center ms-4">
                         <img src="<?php echo G5_THEME_IMG_URL ?>/main_icon_report_01.png" alt="card-horizontal-image">
                     </div>
-                    <div class="col-5 col-sm-7">
+                    <div class="col-7">
                         <div class="mt-4 mb-4">
                             <h5 class="fs-5 fw-bold">학습 결과 보고서</h5>
                             <p class="fs-6 text-secondary ">Daily Class Report</p>                        
@@ -266,10 +266,10 @@ include_once(G5_THEME_PATH.'/head.php');
          <div class="col-12 col-md-6 col-xxl-3">
             <div class="card">
                 <div class="row g-0 ">
-                    <div class="col-5 col-sm-3 d-flex align-items-center ms-4">
+                    <div class="col-3  d-flex align-items-center ms-4">
                         <img src="<?php echo G5_THEME_IMG_URL ?>/main_icon_test_01.png" alt="card-horizontal-image">
                     </div>
-                    <div class="col-5 col-sm-7">
+                    <div class="col-7">
                         <div class="mt-4 mb-4">
                             <h5 class="fs-5 fw-bold">성취도 테스트</h5>
                             <p class="fs-6 text-secondary ">Achievement Test</p>                        
@@ -281,10 +281,10 @@ include_once(G5_THEME_PATH.'/head.php');
          <div class="col-12 col-md-6 col-xxl-3">
             <div class="card">
                 <div class="row g-0 ">
-                    <div class="col-5 col-sm-3 d-flex align-items-center ms-4">
+                    <div class="col-3  d-flex align-items-center ms-4">
                         <img src="<?php echo G5_THEME_IMG_URL ?>/main_icon_solution_01.png" alt="card-horizontal-image">
                     </div>
-                    <div class="col-5 col-sm-7">
+                    <div class="col-7">
                         <div class="mt-4 mb-4">
                             <h5 class="fs-5 fw-bold">화상솔루션</h5>
                             <p class="fs-6 text-secondary ">Online Learning Solutins</p>                        
@@ -296,10 +296,10 @@ include_once(G5_THEME_PATH.'/head.php');
         <div class="col-12 col-md-6 col-xxl-3">
             <div class="card">
                 <div class="row g-0 ">
-                    <div class="col-5 col-sm-3 d-flex align-items-center ms-4">
+                    <div class="col-3 d-flex align-items-center ms-4 ">
                         <img src="<?php echo G5_THEME_IMG_URL ?>/main_icon_homework_01.png" alt="card-horizontal-image">
                     </div>
-                    <div class="col-5 col-sm-7">
+                    <div class="col-7">
                         <div class="mt-4 mb-4 ms-0">
                             <h5 class="fs-5 fw-bold">온오프라인숙제관리</h5>
                             <p class="fs-6 text-secondary ">Homework</p>                        
@@ -311,10 +311,10 @@ include_once(G5_THEME_PATH.'/head.php');
 		 <div class="col-12 col-md-6 col-xxl-3">
             <div class="card">
                 <div class="row g-0 ">
-                    <div class="col-5 col-sm-3 d-flex align-items-center ms-4">
+                    <div class="col-3  d-flex align-items-center ms-4">
                         <img src="<?php echo G5_THEME_IMG_URL ?>/main_icon_attendance_01.png" alt="card-horizontal-image">
                     </div>
-                    <div class="col-5 col-sm-7">
+                    <div class="col-7">
                         <div class="mt-4 mb-4 ms-0">
                             <h5 class="fs-5 fw-bold">출결관리</h5>
                             <p class="fs-6 text-secondary ">Attendance</p>                        
@@ -326,10 +326,10 @@ include_once(G5_THEME_PATH.'/head.php');
 		 <div class="col-12 col-md-6 col-xxl-3">
             <div class="card">
                 <div class="row g-0 ">
-                    <div class="col-5 col-sm-3 d-flex align-items-center ms-4">
+                    <div class="col-3  d-flex align-items-center ms-4">
                         <img src="<?php echo G5_THEME_IMG_URL ?>/main_icon_counsel_01.png" alt="card-horizontal-image">
                     </div>
-                    <div class="col-5 col-sm-7">
+                    <div class="col-7">
                         <div class="mt-4 mb-4 ms-0">
                             <h5 class="fs-5 fw-bold">정기상담관리</h5>
                             <p class="fs-6 text-secondary ">Requla Consulting</p>                        
@@ -341,10 +341,10 @@ include_once(G5_THEME_PATH.'/head.php');
 		 <div class="col-12 col-md-6 col-xxl-3">
             <div class="card">
                 <div class="row g-0 ">
-                    <div class="col-5 col-sm-3 d-flex align-items-center ms-4">
+                    <div class="col-3  d-flex align-items-center ms-4">
                         <img src="<?php echo G5_THEME_IMG_URL ?>/main_icon_alert_01.png" alt="card-horizontal-image">
                     </div>
-                    <div class="col-5 col-sm-7">
+                    <div class="col-7">
                         <div class="mt-4 mb-4 ms-0">
                             <h5 class="fs-5 fw-bold">모바일 알림</h5>
                             <p class="fs-6 text-secondary ">Notifications</p>                        
@@ -356,10 +356,10 @@ include_once(G5_THEME_PATH.'/head.php');
 		<div class="col-12 col-md-6 col-xxl-3">
             <div class="card">
                 <div class="row g-0 ">
-                    <div class="col-5 col-sm-3 d-flex align-items-center ms-4">
+                    <div class="col-3  d-flex align-items-center ms-4">
                         <img src="<?php echo G5_THEME_IMG_URL ?>/main_icon_point_01.png" alt="card-horizontal-image">
                     </div>
-                    <div class="col-5 col-sm-7">
+                    <div class="col-7">
                         <div class="mt-4 mb-4 ms-0">
                             <h5 class="fs-5 fw-bold">포인트 제도</h5>
                             <p class="fs-6 text-secondary ">Rewad System</p>                        
