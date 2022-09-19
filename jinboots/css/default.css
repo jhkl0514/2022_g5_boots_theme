@@ -117,8 +117,7 @@ h2.stitle{font-size: 32px;}
 
 @media (max-width: 767px) {
  .bottom {display:none }
-  body{padding:0 7px ;}
- 
+  body{padding:0 7px ;} 
  }
  
 

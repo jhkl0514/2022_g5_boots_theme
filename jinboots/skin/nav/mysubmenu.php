@@ -5,7 +5,7 @@
 	#mysubmenu{
 		position: absolute;top:0;left: 50%; margin-top: -75px;
 		transform:translateX(-50%);	
-		width: 500px;	
+		width: 100%;	
 		}
 	#snb {width:100%;}
 	#snb > li.snb{width:100%;display:none;}

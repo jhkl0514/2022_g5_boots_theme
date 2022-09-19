@@ -124,7 +124,7 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
     <div class="txtWrap">
         <h2 class="loc1D stitle text-start text-black locTitle"></h2>
         <div class="mt-3">
-            <ul class="d-flex p-2 px-4 rounded-5 bg-dark bg-opacity-75 text-white gap-2 fs-6 ">
+            <ul class="d-flex p-2 px-4 rounded-5 bg-dark bg-opacity-75 text-white gap-2 fs-md-6 fs ">
                 <li><img src="<? echo G5_THEME_IMG_URL?>/home_icon_white.png" alt=""></li>
                 <li><img src="<? echo G5_THEME_IMG_URL?>/sub_banner_nav_arrow.png" alt=""></li>
                 <li class="loc1D"></li>
